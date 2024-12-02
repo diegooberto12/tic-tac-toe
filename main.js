@@ -16,7 +16,7 @@ const tictactoe6 = document.querySelector(".seis");
 const tictactoe7 = document.querySelector(".siete");
 const tictactoe8 = document.querySelector(".ocho");
 const tictactoe9 = document.querySelector(".nueve");
-
+const btnReset = document.querySelector(".reset-game")
 function turnChange(){
 currentPlayer == player1 ? currentPlayer = player2 : currentPlayer = player1;
 }
@@ -25,8 +25,12 @@ currentPlayer=player1;
 }
 
 function selection(actualplayer,array_select){
-    tic_tt[array_select]= actualplayer;
-    switch (array_select){
+    if (tic_tt[array_select] != null)
+   {alert("You can't select that tile") }
+    else
+    {tic_tt[array_select]= actualplayer;
+
+        switch (array_select){
         case (0):
             tictactoe1.textContent = `${currentPlayer}`;
             break;
@@ -55,9 +59,19 @@ function selection(actualplayer,array_select){
             tictactoe9.textContent = `${currentPlayer}`;
             break;
     }
+    }
+    turnChange()
+    Check4Win(tic_tt)
+    
 };
 
 
+function Check4Win(){
+if (tic_tt[0 == currentPlayer] && tic_tt[1]== currentPlayer && tic_tt[2 == currentPlayer]){
+alert("gano");
+}
+
+}
 startgame();
 turnChange();
 console.log(currentPlayer);

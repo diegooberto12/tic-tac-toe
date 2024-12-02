@@ -19,7 +19,7 @@ body {
 
 .chest{
     flex:1 1 80%;
-    background-color: darksalmon;
+    background-color: rgb(182, 118, 97);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -31,26 +31,53 @@ body {
     text-align: center;
     padding: 0.5em;
     margin-top: 2px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 17px;
 }
 .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 columnas de igual tamaño */
     grid-template-rows: repeat(3, 1fr); /* 3 filas de igual tamaño */
-    gap: 10px; /* Espacio entre elementos */
+     /* Espacio entre elementos */
     margin-top: 0px;
+    gap: 0px;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
     
 }
 .grid > div {   /* this is each item of the grid*/
     text-align: center;
-    background-color: #f0f0f0;
-    border: 1px solid #ccc;
+    /* background-color: #f0f0f0;
+    border: 1px solid #ccc; */
     width: 5em;
     height: 2em;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    margin: -1px;
+}
+.uno{
+    border-right: 1px black solid;
+    border-bottom:  1px black solid;
+}
+.tres{
+    border-left: 1px black solid;
+    border-bottom: 1px black solid;
+}
+.cinco{
+    border: 1px black solid;
+    border-top: 1px black solid;
+}
+.siete{
+    border-right: 1px black solid;
+    border-top: 1px black solid;
+}
+.nueve{
+    border-left: 1px black solid;
+    border-top: 1px black solid;
 }
 .turn{ 
+    margin-top: 1em;
     text-align: center;
 }
